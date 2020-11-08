@@ -4,4 +4,10 @@ class PagesController < ApplicationController
     #I don´t need write in the function 
     def hello
     end
+
+    def login
+    end
+
+    def register
+    end
 end
