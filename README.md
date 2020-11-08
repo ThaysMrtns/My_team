@@ -2,4 +2,4 @@
 > web application in evolution
 
 ### Deploy Heroku
-> https://immense-bastion-58952.herokuapp.com/ 
+> https://team-livima.herokuapp.com/ 
