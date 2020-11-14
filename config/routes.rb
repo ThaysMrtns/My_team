@@ -5,5 +5,5 @@ Rails.application.routes.draw do
   get 'login', to: 'pages#login'
   get 'register', to: 'pages#register'
   #Will give me all routes of the article
-  resources :article, only: [:show, :index, :new, :create, :edit, :update] #But I want only the read operation
+  resources :article, only: [:show, :index, :new, :create, :edit, :update, :destroy] #But I want only the read operation
 end
