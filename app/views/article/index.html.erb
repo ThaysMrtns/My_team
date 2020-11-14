@@ -1,0 +1,21 @@
+<h1>People list</h1>
+
+<table>
+    <thead>
+        <tr>
+            <th>Name: </th>
+            <th>Function: </th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    
+    <tbody>
+        <% @articles.each do |article| %>
+        <tr>
+            <td><%=article.nome %></td>
+            <td><%=article.cargo %></td>
+            <td>Placeholder</td>
+        </tr>
+        <% end %>
+    </tbody>
+</table>
