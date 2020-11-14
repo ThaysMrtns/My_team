@@ -9,4 +9,12 @@ class ArticleController < ApplicationController
     def index
         @articles = Article.all
     end
+
+    def new
+    end
+
+    def create
+       @article = Article.new(params.require(:article).permit(:nome, :cargo, :email, :salario)) 
+       @article.save()
+    end
 end

@@ -1,0 +1,22 @@
+<h1>Add person</h1>
+
+<%= form_with scope: :article, url: "/article", local: true do |f| %>
+    <div>
+        <%= f.label :nome%><br/>
+        <%= f.text_field :nome%>
+    </div>
+    <div>
+        <%= f.label :cargo%><br/>
+        <%= f.text_field :cargo%>
+    </div>
+    <div>
+        <%= f.label :email%><br/>
+        <%= f.text_field :email%>
+    </div>
+    <div>
+        <%= f.label :salario%><br/>
+        <%= f.text_field :salario%>
+    </div>
+
+    <%= f.submit%>
+<% end %>
