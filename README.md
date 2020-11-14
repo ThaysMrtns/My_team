@@ -1,5 +1,5 @@
 # My_team
-> web application in evolution
+> My Team it's a web application for managing people.
 
 ### Deploy Heroku
 > https://team-livima.herokuapp.com/ 
