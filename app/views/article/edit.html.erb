@@ -1,0 +1,32 @@
+<h1>Edit</h1>
+
+<% if @article.errors.any? %>
+    <h2>Errors</h2>
+    <ul>
+        <% @article.errors.full_messages.each do |msg|%>
+            <li><%=msg%></li>
+        <%end%>
+    </ul>
+    
+<%end%>
+
+<%= form_with(model: @article, local: true) do |f| %>
+    <div>
+        <%= f.label :nome%><br/>
+        <%= f.text_field :nome%>
+    </div>
+    <div>
+        <%= f.label :cargo%><br/>
+        <%= f.text_field :cargo%>
+    </div>
+    <div>
+        <%= f.label :email%><br/>
+        <%= f.text_field :email%>
+    </div>
+    <div>
+        <%= f.label :salario%><br/>
+        <%= f.text_field :salario%>
+    </div>
+
+    <%= f.submit%>
+<% end %>
