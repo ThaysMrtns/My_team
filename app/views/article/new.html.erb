@@ -1,32 +1,37 @@
-<h1>Add person</h1>
+<!-- As a heading -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <h1 class="navbar-brand" href="">My team</h1>
+</nav>
+<div class="container-md">
+        <% if @article.errors.any? %>
+        <div class="alert alert-primary" role="alert">
+            <h2>Errors</h2>
+            <ul>
+                <% @article.errors.full_messages.each do |msg|%>
+                    <li><%=msg%></li>
+                <%end%>
+            </ul>
+        </div>
+    <%end%>
 
-<% if @article.errors.any? %>
-    <h2>Errors</h2>
-    <ul>
-        <% @article.errors.full_messages.each do |msg|%>
-            <li><%=msg%></li>
-        <%end%>
-    </ul>
-    
-<%end%>
-
-<%= form_with scope: :article, url: "/article", local: true do |f| %>
-    <div>
-        <%= f.label :nome%><br/>
-        <%= f.text_field :nome%>
-    </div>
-    <div>
-        <%= f.label :cargo%><br/>
-        <%= f.text_field :cargo%>
-    </div>
-    <div>
-        <%= f.label :email%><br/>
-        <%= f.text_field :email%>
-    </div>
-    <div>
-        <%= f.label :salario%><br/>
-        <%= f.text_field :salario%>
-    </div>
-
-    <%= f.submit%>
-<% end %>
+    <%= form_with scope: :article, url: "/article", local: true do |f| %>
+        
+        <div>
+            <%= f.label :nome%><br/>
+            <%= f.text_field :nome%>
+        </div>
+        <div>
+            <%= f.label :cargo%><br/>
+            <%= f.text_field :cargo%>
+        </div>
+        <div>
+            <%= f.label :email%><br/>
+            <%= f.text_field :email%>
+        </div>
+        <div>
+            <%= f.label :salario%><br/>
+            <%= f.text_field :salario%>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    <% end %>
+</div>

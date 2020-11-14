@@ -1,27 +1,21 @@
-<h1>People listing</h1>
+<!-- As a heading -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <h1 class="navbar-brand">My team</h1>
+</nav>
+<br><br>
 
-<table>
-    <thead>
-        <tr>
-            <th>Name:  </th>
-            <th>Function:  </th>
-            <th colspan="3">Actions</th>
-        </tr>
-    </thead>
-    
-    <tbody>
-        <% @articles.each do |article| %>
-        <tr>
-            <td><%=article.nome %></td>
-            <td><%=article.cargo %></td>
-            <td><%= link_to 'Show', article_path(article.id)%></td>
-            <td><%= link_to 'Edit', edit_article_path(article.id)%></td>
-            <td><%= link_to 'Delete', article_path(article.id), method: :delete %></td>
-        </tr>
-        <% end %>
-        <p>
-            <%= link_to 'Add new person', new_article_path%>
-        </p>
-        
-    </tbody>
-</table>
+<div class="container-md">
+    <% @articles.each do |article| %> 
+        <ul class="row list-group  list-group-horizontal-lg">
+            <li class="col-sm-3 list-group-item" aria-disabled="true"><%=article.nome %></li>
+            <li class="col-sm-3 list-group-item"><%=article.cargo %></li>
+            <li class="col-sm-3 list-group-item">
+                <%= link_to 'Show', article_path(article.id)%>  |
+                <%= link_to 'Edit', edit_article_path(article.id)%>  |
+                <%= link_to 'Delete', article_path(article.id), method: :delete %> 
+            </li>
+        </ul>
+        <% end %><br>
+        <%=link_to 'Add new person', new_article_path%>
+</div>   
+

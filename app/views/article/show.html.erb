@@ -1,11 +1,29 @@
-<h1>Show page</h1>
+<!-- As a heading -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <h1 class="navbar-brand" href="">My team</h1>
+</nav>
 
-<h3>Name: <%= @article.nome%></h3>
-<h3>Function: <%= @article.cargo%></h3>
-<h3>Salary: <%= @article.salario%></h3>
-<h3>Email: <%= @article.email%></h3>
-<br>
-<%= link_to 'Edit', edit_article_path(@article)%> |
-<%= link_to 'Delete', article_path(@article), method: :delete %> |
-<%= link_to 'Return to people listing', article_path%>
+<div class="container-md">
+    <ul class="list-group list-group-horizontal">
+        <li class="col-sm-3 list-group-item">Name: </li>
+        <li class="col-sm-3 list-group-item"><%= @article.nome%></li>
+    </ul>
+    <ul class="list-group list-group-horizontal">
+        <li class="col-sm-3 list-group-item">Function: </li>
+        <li class="col-sm-3 list-group-item"><%= @article.cargo%></li>
+    </ul>
+    <ul class="list-group list-group-horizontal">
+        <li class="col-sm-3 list-group-item">Salary: </li>
+        <li class="col-sm-3 list-group-item"> <%= @article.salario%></li>
+    </ul>
+    <ul class="list-group list-group-horizontal">
+        <li class="col-sm-3 list-group-item">Email: </li>
+        <li class="col-sm-3 list-group-item"><%= @article.email%></li>
+    </ul>
+    <br>
+    <%= link_to 'Edit', edit_article_path(@article)%> |
+    <%= link_to 'Delete', article_path(@article), method: :delete %> |
+    <%= link_to 'Return to people listing', article_path(@article)%>
+</div>
+
 
