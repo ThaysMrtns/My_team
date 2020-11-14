@@ -1,11 +1,11 @@
-<h1>People list</h1>
+<h1>People listing</h1>
 
 <table>
     <thead>
         <tr>
-            <th>Name: </th>
-            <th>Function: </th>
-            <th>Actions</th>
+            <th>Name:  </th>
+            <th>Function:  </th>
+            <th colspan="3">Actions</th>
         </tr>
     </thead>
     
@@ -15,8 +15,13 @@
             <td><%=article.nome %></td>
             <td><%=article.cargo %></td>
             <td><%= link_to 'Show', article_path(article.id)%></td>
+            <td><%= link_to 'Edit', edit_article_path(article.id)%></td>
             <td><%= link_to 'Delete', article_path(article.id), method: :delete %></td>
         </tr>
         <% end %>
+        <p>
+            <%= link_to 'Add new person', new_article_path%>
+        </p>
+        
     </tbody>
 </table>

@@ -4,4 +4,8 @@
 <h3>Function: <%= @article.cargo%></h3>
 <h3>Salary: <%= @article.salario%></h3>
 <h3>Email: <%= @article.email%></h3>
+<br>
+<%= link_to 'Edit', edit_article_path(@article)%> |
+<%= link_to 'Delete', article_path(@article), method: :delete %> |
+<%= link_to 'Return to people listing', article_path%>
 
