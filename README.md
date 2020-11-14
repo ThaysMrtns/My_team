@@ -2,7 +2,7 @@
 > My Team it's a web application for managing people.
 
 ### Deploy Heroku
-> https://team-livima.herokuapp.com/ 
+> https://agile-stream-63029.herokuapp.com/article
 
 ### Install dependencies
 > bundle install
