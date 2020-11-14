@@ -5,7 +5,7 @@
 > https://team-livima.herokuapp.com/ 
 
 ### Install dependencies
-> bundle-install
+> bundle install
 ##### https://bundler.io/v1.5/man/bundle-install.1.html
 
 ### Load web application
