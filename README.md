@@ -4,6 +4,13 @@
 ### Deploy Heroku
 > https://team-livima.herokuapp.com/ 
 
+### Install dependencies
+> bundle-install
+##### https://bundler.io/v1.5/man/bundle-install.1.html
+
+### Load web application
+> rails s
+
 ### Routes
 ##### GET: /article 
 ##### POST: /article
