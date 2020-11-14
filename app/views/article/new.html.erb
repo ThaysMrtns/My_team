@@ -1,5 +1,15 @@
 <h1>Add person</h1>
 
+<% if @article.errors.any? %>
+    <h2>Errors</h2>
+    <ul>
+        <% @article.errors.full_messages.each do |msg|%>
+            <li><%=msg%></li>
+        <%end%>
+    </ul>
+    
+<%end%>
+
 <%= form_with scope: :article, url: "/article", local: true do |f| %>
     <div>
         <%= f.label :nome%><br/>

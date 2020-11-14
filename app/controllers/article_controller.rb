@@ -11,11 +11,16 @@ class ArticleController < ApplicationController
     end
 
     def new
+        @article = Article.new
     end
 
     def create
        @article = Article.new(params.require(:article).permit(:nome, :cargo, :email, :salario)) 
-       @article.save()
-       redirect_to @article
+       if @article.save()
+            flash[:alert] = "Added with successfully!"
+            redirect_to @article
+       else
+            render 'new'
+       end
     end
 end
